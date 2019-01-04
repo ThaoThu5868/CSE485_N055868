@@ -1,0 +1,34 @@
+<div class="container path"  >
+    <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="<?php echo base_url();?>index.php/trangchu/tchu" style="color:#df4c40"><strong>Trang chủ</strong></a></li>
+    <li class="breadcrumb-item"><a><span>Khoá học</span></a></li>
+    </ol>
+</div
+<!--Nội dung chính-->
+<div class="me-body"> 
+    <div class="container">
+        <div class="row">
+            <!--Nội dung giới thiệu-->
+            <div class="col-sm-8" style="background-color:white;">
+                <?php  foreach ($arrKH as $row) { ?>
+                <div class="container">
+                    <div class="row introduce" style="margin-top:10px">
+                        <div class="col-md-6 col-lg-5"><a href="<?php echo base_url();?>index.php/khoahoc/kh"><img class="img-fluid w3-hover-opacity w3-animate-zoom" src="<?php echo base_url();?>assets/img/khoahoc/<?php echo $row['LINKKH'];?>"  />
+                        </div></a>
+                        <div class="col-md-6 col-lg-7">
+                            <h3><?php echo $row['TIEUDEKH'];?> - <?php echo $row['GIAKH'];?>VND</h3>
+                            <p><?php echo $row['TOMTATKH'];?></p>
+                            <a href="<?php echo base_url();?>index.php/baihoc/bh/<?php echo $row['MAKH'];?>"  style="float: right;color: #800000"><b>Học Thử <i class="fa fa-arrow-circle-right"></i></b></a>
+                        </div>
+
+                    </div>
+                </div>
+                <?php 
+                }
+                ?>
+               <div class="pagination justify-content-center">
+          <?php echo $this->pagination->create_links();?>
+                </div> 
+            </div>
+
+            

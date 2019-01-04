@@ -16,11 +16,10 @@
             <div class="collapse navbar-collapse" id="navcol-1">
                 <div class="dropdown ml-auto navbar-text actions" >
                     <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                        <i class="fa fa-user"></i> Admin Thu!
+                        <i class="fa fa-user"></i> Admin : <?php echo $this->session->userdata("TENAD"); ?>!
                     </button>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#"><i class="fa fa-cogs" aria-hidden="true"></i> Sửa thông tin tài khoản</a>
-                        <a class="dropdown-item" href="#">Link 2</a>
+                        <a class="dropdown-item" href="<?php echo base_url() . 'index.php/admin/edit_admin/' . $this->session->userdata('MAAD');?>"<i class="fa fa-cogs" aria-hidden="true"></i> Sửa thông tin tài khoản</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> Đăng Xuất</a>
                     </div>

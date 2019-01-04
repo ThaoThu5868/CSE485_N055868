@@ -74,10 +74,10 @@ strong:hover{
 /*Menu dọc*/
 #mySidenav a {
 	position: absolute;
-	left: -290px;
+	left: -340px;
 	transition: 0.3s;
 	padding: 14px;
-	width: 330px;
+	width: 380px;
 	text-decoration: none;
 	font-size: 15px;
 	color: white;
@@ -283,25 +283,6 @@ li{
         position: static;
     }
 }
-/* Body admin */
-/* .input-group-text{
-    width:200px;
-}
-.me-submit{
-    float: right;
-    margin-bottom: 20px;
-}
-.input-group-text{
-    background-color: #c6edf9;
-}
-.me-mb-3{
-    width: 700px;
-}
-
-.me-form{
-    width: 700px;
-} */
-
 .panel-body{
     overflow-x: scroll;
 }
@@ -325,4 +306,10 @@ li{
 .hoadon{
     width: 500px;
     margin:0 auto;
+}
+.dangky{
+    width: 50%;
+}
+.tieudesuaadmin{
+    text-align: center;
 }

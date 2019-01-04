@@ -1,9 +1,9 @@
 <div class="content">
     <div class="col-md-6 add-dm">
-        <h4 class="text-center"><b>Thêm Giảng Viên</b></h4>
+        <h3 class="text-center"><b>Thêm Giảng Viên</b></h3>
     </div>
     <div class="clearfix"></div>
-    <form method="post" action="<?php echo base_url();?>index.php/admin/pro_themgv">
+    <?php echo form_open_multipart('/admin/pro_themgv'); ?>
         <div class="form">
             <table class="table">
                 <tr>
@@ -12,7 +12,7 @@
                 </tr>
                 <tr>
                     <td><P>Hình ảnh</p></td>
-                    <td><input type="text" name="link" class="form-control"></td>
+                    <td><input type="file" name="link" class="form-control"></td>
                 </tr>
                 <tr>
                     <td><P>Tiêu đề</p></td>

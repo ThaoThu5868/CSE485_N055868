@@ -5,9 +5,6 @@
   include_once "header_view.php";
 ?>
 <?php
-  include_once "duongdan_view.php";
-?>
-<?php
   include_once "menudoc_view.php";
 ?>
 <?php

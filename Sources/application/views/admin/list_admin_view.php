@@ -1,5 +1,17 @@
 <div class="col-md-12 col-md-offset-1 me-list-admin">
     <div class="panel panel-default panel-table">
+        <div class="card" style="background:#df4c40;width:400px;float:right" >
+            <form action="<?php echo base_url();?>index.php/admin/searchAD" method="post">
+                <div class="input-group" >
+                    <input type="text" class="form-control" placeholder="Tìm kiếm" name="search">
+                    <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                    </div>
+                </div>
+            </form>
+        </div>
         <div class="panel panel-default panel-table">
             <div class="panel-heading">
                 <div class="row">
@@ -13,7 +25,6 @@
             <table class="table table-striped table-bordered table-list">
                 <thead>
                 <tr>
-                    <th><i class="fa fa-cogs" aria-hidden="true"></i></th>
                     <th>Mã</th>
                     <th>Tên đăng nhập</th>
                     <th>Họ Tên</th>
@@ -27,9 +38,6 @@
                 <tbody>
                 <?php foreach ($arrAD as $row){?>
                     <tr class="w3-animate-left">
-                        <td align="center">
-                            <a class="btn btn-default" href = "#"><em class="fa fa-pencil"></em></a>
-                        </td>
                         <td><?php echo $row['MAAD'];?></td>
                         <td><?php echo $row['TENDNAD'];?></td>
                         <td><?php echo $row['TENAD'];?></td>

@@ -1,5 +1,17 @@
 <div class="col-md-12 col-md-offset-1 me-list-admin">
     <div class="panel panel-default panel-table">
+        <div class="card" style="background:#df4c40;width:400px;float:right" >
+            <form action="<?php echo base_url();?>index.php/admin/searchKH" method="post">
+                <div class="input-group" >
+                    <input type="text" class="form-control" placeholder="Tìm kiếm" name="search">
+                    <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                    </div>
+                </div>
+            </form>
+        </div>
         <div class="panel panel-default panel-table">
             <div class="panel-heading">
                 <div class="row">
@@ -16,25 +28,24 @@
                     <th><i class="fa fa-cogs" aria-hidden="true"></i></th>
                     <th>Mã</th>
                     <th>Tên</th>
-                    <th>Loại</th>
                     <th>Hình ảnh</th>
                     <th>Tiêu đề</th>
                     <th>Tóm tắt</th>
                     <th>Giá </th>
                     <th>Người tạo</th>
-                    <th>Bài học</th>
+                    <th>Bài học</th> 
                 </tr>
                 </thead>
                 <tbody>
                 <?php foreach ($arrKH as $row){?>
                     <tr class="w3-animate-left">
                         <td align="center">
-                            <a class="btn btn-default" href = "#"><em class="fa fa-pencil"></em></a>
-                            <a class="btn btn-default" onclick="return confirm('Bạn có muốn xóa không');" href = "<?php echo base_url();?>index.php/admin/deletekh/<?php echo $row['MAKH'];?>"><em class="fa fa-trash"></em></a>
+                            <a class="btn " href = "<?php echo base_url() . 'index.php/admin/edit_kh/' . $row['MAKH'];?>"><em class="fa fa-pencil"></em></a>
+                            <br>
+                            <a class="btn " onclick="return confirm('Bạn có muốn xóa không');" href = "<?php echo base_url();?>index.php/admin/deletekh/<?php echo $row['MAKH'];?>"><em class="fa fa-trash"></em></a>
                         </td>
                         <td><?php echo $row['MAKH'];?></td>
                         <td><?php echo $row['TENKH'];?></td>
-                        <td><?php echo $row['LOAIKH'];?></td>
                         <td><?php echo $row['LINKKH'];?></td>
                         <td><?php echo $row['TIEUDEKH'];?></td>
                         <td><?php echo $row['TOMTATKH'];?></td>

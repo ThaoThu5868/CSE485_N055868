@@ -1,5 +1,17 @@
 <div class="col-md-12 col-md-offset-1 me-list-admin">
     <div class="panel panel-default panel-table">
+        <div class="card" style="background:#df4c40;width:400px;float:right" >
+            <form action="<?php echo base_url();?>index.php/admin/searchHD" method="post">
+                <div class="input-group" >
+                    <input type="text" class="form-control" placeholder="Tìm kiếm" name="search">
+                    <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                    </div>
+                </div>
+            </form>
+        </div>
         <div class="panel panel-default panel-table">
             <div class="panel-heading">
                 <div class="row">
@@ -23,14 +35,16 @@
                     <th>Mã Khuyến mãi</th>
                     <th>Tổng tiền</th>
                     <th>Check</th>
+                    <th>Xuất hoá đơn</th>
                 </tr>
                 </thead>
                 <tbody>
                 <?php foreach ($arrHD as $row){?>
                     <tr class="w3-animate-left">
                         <td align="center">
-                            <a class="btn btn-default" href = "#"><em class="fa fa-pencil"></em></a>
-                            <a class="btn btn-default" onclick="return confirm('Bạn có muốn xóa không');" href = "<?php echo base_url();?>index.php/admin/deletehd/<?php echo $row['MAHD'];?>"><em class="fa fa-trash"></em></a>
+                            <a class="btn " href = "<?php echo base_url() . 'index.php/admin/edit_hd/' . $row['MAHD'];?> "><em class="fa fa-pencil"></em></a>
+                            <br>
+                            <a class="btn " onclick="return confirm('Bạn có muốn xóa không');" href = "<?php echo base_url();?>index.php/admin/deletehd/<?php echo $row['MAHD'];?>"><em class="fa fa-trash"></em></a>
                         </td>
                         <td><?php echo $row['MAHD'];?></td>
                         <td><?php echo $row['NGAYHD'];?></td>
@@ -38,9 +52,12 @@
                         <td><?php echo $row['TENHV'];?></td>
                         <td><?php echo $row['MAKH'];?></td>
                         <td><?php echo $row['GIAKH'];?></td>
-                        <td><?php echo $row['MAKM'];?></td>
+                        <td><?php echo $row['MAKM'];?></td> 
                         <td><?php echo $row['TONGTIEN'];?></td>
                         <td><?php echo $row['CHECKTT'];?></td>
+                        <td align="center">
+                            <a class="btn btn-default" href = "<?php echo  base_url() .'index.php/admin/XuatHoaDon/' . $row['MAHD']; ?>"><em class="fa"> Xuất hoá đơn</em></a>
+                        </td>
                     </tr>
                 <?php
                 }

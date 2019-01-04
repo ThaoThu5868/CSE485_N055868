@@ -1,23 +1,11 @@
 <div class="content">
     <div class="col-md-6 add-dm">
-        <h4 class="text-center"><b>Thêm Khóa Học</b></h4>
+        <h3 class="text-center"><b>Thêm Khóa Học</b></h3>
     </div>
     <div class="clearfix"></div>
-    <form method="post"  action="<?php echo base_url();?>index.php/admin/pro_themkh">
+    <?php echo form_open_multipart('/admin/pro_themkh'); ?>  
         <div class="form">
             <table class="table">
-                <!-- <tr>
-                    <td><p>Loại khóa học</p></td>
-                    <td><select name="cat" class="form-control">
-                            <option value="">Học Online</option>
-                            <option value="">Học Offline</option>
-                        </select>
-                    </td>
-                </tr> -->
-                <tr>
-                    <td><P>Loại</p></td>
-                    <td><input type="text" name="loai" class="form-control"></td>
-                </tr>
                 <tr>
                     <td><P>Tên</p></td>
                     <td><input type="text" name="ten" class="form-control"></td>
@@ -32,15 +20,15 @@
                 </tr>
                 <tr>
                     <td><P>Giá</p></td>
-                    <td><input type="number" name="gia" class="form-control"></td>
+                    <td><input type="text" name="gia" class="form-control"></td>
                 </tr>
                 <tr>
                     <td><P>Hình ảnh</p></td>
-                    <td><input type="text" name="link" class="form-control"></td>
+                    <td><input type="file" name="link" class="form-control"></td>
                 </tr>
                 <tr>
                     <td><P>Người tạo</p></td>
-                    <td><input type="text" name="maad" class="form-control"></td>
+                    <td><input type="text" readonly name="maad" class="form-control" value="<?php echo $this->session->userdata("MAAD"); ?>"></td>
                 </tr>
                 
             </table>

@@ -20,13 +20,9 @@
                     <li class="nav-item" role="presentation">
                         <a class="nav-link" href="<?php echo base_url();?>index.php/gt/gioithieu">GIỚI THIỆU </a>
                     </li>
-                    <!--dropdown-->
-                    <li class="dropdown">
-                        <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">KHÓA HỌC </a>
-                        <div class="dropdown-menu" role="menu">
-                            <a class="dropdown-item" role="presentation" href="#">Học Online</a>
-                            <a class="dropdown-item" role="presentation" href="#">Học Offline</a>
-                        </div>
+                    <!--Khoá học-->
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" href="<?php echo base_url();?>index.php/khoahoc/kh">KHOÁ HỌC</a>
                     </li>
                     <!--Khuyến mãi-->
                     <li class="nav-item" role="presentation">
@@ -44,8 +40,8 @@
                 </ul>
                 <!--Đăng ký - Đăng nhập-->
                 <p class="ml-auto navbar-text actions">
-                    <a href="#" class="btn btn-light" role="button" id="btnDangNhap"><i class="fa fa-user"></i>Đăng Nhập</a>
-                    <a class="btn btn-light" role="button" href="#" id="btnDangKy"><i class="fa fa-sign-in"></i>Đăng Ký</a>
+                    <a href="<?php echo base_url();?>index.php/dangnhap/view" class="btn btn-light" role="button" id="btnDangNhap"><i class="fa fa-user"></i>Đăng Nhập</a>
+                    <a class="btn btn-light" role="button" href="<?php echo base_url();?>index.php/dangki/pro_themhv" id="btnDangKy"><i class="fa fa-sign-in"></i>Đăng Ký</a>
                 </p>
             </div>
         </div>
